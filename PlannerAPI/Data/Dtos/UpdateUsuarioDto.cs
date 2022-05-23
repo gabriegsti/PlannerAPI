@@ -1,13 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace PlannerAPI.Model
+namespace PlannerAPI.Data.Dtos
 {
-    public class Usuario
+    public class UpdateUsuarioDto
     {
-        [Key]
-        [Required]
-        public int Id_Usuario { get; set; }
-
         [Required(ErrorMessage = "O campo nome é obrigatório.")]
         public string Nome { get; set; }
 

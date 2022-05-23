@@ -1,4 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using PlannerAPI.Data;
+using PlannerAPI.Data.Dtos;
+using PlannerAPI.Facades.Interfaces;
 using PlannerAPI.Model;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,30 +13,49 @@ namespace PlannerAPI.Controllers
     [Route("[controller]")]
     public class UsuarioController : ControllerBase
     {
-        private static List<Usuario> Usuarios = new List<Usuario>();
-        private static int id = 1;
-
-        [HttpPost]
-        public IActionResult AdicionaUsuario([FromBody] Usuario usuario)
+        public IUsuarioFacade UsuarioFacade { get; set; }
+        public UsuarioController(IUsuarioFacade usuarioFacade)
         {
-            usuario.Id = id++;
-            Usuarios.Add(usuario);
-            return CreatedAtAction(nameof(RecuperaUsuarioPorId), new { Id = usuario.Id }, usuario);
+            UsuarioFacade = usuarioFacade;
+        }
+        [HttpPost]
+        public IActionResult AdicionaUsuario([FromBody] CreateUsuarioDto usuarioDto)
+        {
+            Usuario usuario = UsuarioFacade.AdicionaUsuario(usuarioDto);
+            return CreatedAtAction(nameof(RecuperaUsuarioPorId), new { Id = usuario }, usuario);
         }
 
         [HttpGet]
         public IActionResult RecuperaUsuarios()
         {
-            return Ok(Usuarios);
+            return Ok(UsuarioFacade.RecuperaUsuarios());
         }
 
         [HttpGet("{id}")]
         public IActionResult RecuperaUsuarioPorId(int id)
         {
-            Usuario usuario =  Usuarios.FirstOrDefault(usuario => usuario.Id == id);
+            ReadUsuarioDto usuario = UsuarioFacade.RecuperaUsuarioPorId(id);
             if (usuario != null)
-              return  Ok(usuario);
+                return Ok(usuario);
             return NotFound();
+        }
+
+        [HttpPut("{id}")]
+        public IActionResult AtualizaUsuario(int id, [FromBody] UpdateUsuarioDto usuarioDto)
+        {
+            Usuario usuario = UsuarioFacade.AtualizaUsuario(id, usuarioDto);
+            if(usuario == null)
+                return NotFound();
+            return NoContent();
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult DeletaUsuario(int id)
+        {
+            Usuario usuario = UsuarioFacade.DeletaUsuario(id);
+            if (usuario == null)
+                return NotFound();
+            return NoContent();
         }
 
     }

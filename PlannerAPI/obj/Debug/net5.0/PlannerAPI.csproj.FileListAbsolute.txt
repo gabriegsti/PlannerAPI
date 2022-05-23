@@ -35,3 +35,10 @@ C:\Users\gabri\source\repos\PlannerAPI\PlannerAPI\obj\Debug\net5.0\refint\Planne
 C:\Users\gabri\source\repos\PlannerAPI\PlannerAPI\obj\Debug\net5.0\PlannerAPI.pdb
 C:\Users\gabri\source\repos\PlannerAPI\PlannerAPI\obj\Debug\net5.0\PlannerAPI.genruntimeconfig.cache
 C:\Users\gabri\source\repos\PlannerAPI\PlannerAPI\obj\Debug\net5.0\ref\PlannerAPI.dll
+C:\Users\gabri\source\repos\PlannerAPI\PlannerAPI\bin\Debug\net5.0\EFCore.NamingConventions.dll
+C:\Users\gabri\source\repos\PlannerAPI\PlannerAPI\bin\Debug\net5.0\AutoMapper.dll
+C:\Users\gabri\source\repos\PlannerAPI\PlannerAPI\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\gabri\source\repos\PlannerAPI\PlannerAPI\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\gabri\source\repos\PlannerAPI\PlannerAPI\bin\Debug\net5.0\Microsoft.Extensions.Options.dll
+C:\Users\gabri\source\repos\PlannerAPI\PlannerAPI\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
+C:\Users\gabri\source\repos\PlannerAPI\PlannerAPI\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
