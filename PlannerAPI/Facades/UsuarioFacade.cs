@@ -12,10 +12,10 @@ namespace PlannerAPI.Facades
 {
     public class UsuarioFacade : IUsuarioFacade
     {
-        private UsuarioContext Context { get; set; }
+        private PlannerContext Context { get; set; }
         private IMapper Mapper { get; set; }
 
-        public UsuarioFacade(UsuarioContext context, IMapper mapper)
+        public UsuarioFacade(PlannerContext context, IMapper mapper)
         {
             Context = context;
             Mapper = mapper;
@@ -24,7 +24,6 @@ namespace PlannerAPI.Facades
         public Usuario AdicionaUsuario(CreateUsuarioDto usuarioDto)
         {
             Usuario usuario = Mapper.Map<Usuario>(usuarioDto);
-            var valor = Context.tb_usuario.Count();
             Context.tb_usuario.Add(usuario);
             Context.SaveChanges();
 

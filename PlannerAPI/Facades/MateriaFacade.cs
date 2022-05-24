@@ -1,35 +1,70 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore;
+using PlannerAPI.Data;
 using PlannerAPI.Data.Dtos.Materia;
 using PlannerAPI.Facades.Interfaces;
 using PlannerAPI.Model;
+using System.Linq;
 
 namespace PlannerAPI.Facades
 {
     public class MateriaFacade : IMateriaFacade
     {
-        public Materia AdicionaMateria(CreateMateriaDto materia)
-        {
-            throw new System.NotImplementedException();
-        }
+        public PlannerContext Context { get; set; }
 
-        public Materia AtualizaMateria(int id, UpdateMateriaDto materiaNova)
-        {
-            throw new System.NotImplementedException();
-        }
+        public IMapper Mapper { get; set; }
 
-        public Materia DeletaMateria(int id)
+        public MateriaFacade(PlannerContext context, IMapper mapper)
         {
-            throw new System.NotImplementedException();
+            Context = context;  
+            Mapper = mapper;
         }
-
-        public ReadMateriaDto RecuperaMateriaPorId(int id)
+        public Materia AdicionaMateria(CreateMateriaDto materiaDto)
         {
-            throw new System.NotImplementedException();
+            Materia materia = Mapper.Map<Materia>(materiaDto);
+            Context.tb_materia.Add(materia);
+            Context.SaveChanges();
+
+            return materia;
         }
 
         public DbSet<Materia> RecuperaMaterias()
         {
-            throw new System.NotImplementedException();
+            return Context.tb_materia;
+        }
+        public ReadMateriaDto RecuperaMateriaPorId(int id)
+        {
+            Materia materia = Context.tb_materia.FirstOrDefault(materia => materia.Id_Materia == id);
+            if (materia != null)
+            {
+                ReadMateriaDto materiaDto = Mapper.Map<ReadMateriaDto>(materia);
+                return materiaDto;
+            }
+            return null;
+        }
+
+        public Materia AtualizaMateria(int id, UpdateMateriaDto materiaDto)
+        {
+            Materia materia = Context.tb_materia.FirstOrDefault(materia => materia.Id_Materia == id);
+
+            if (materia == null)
+                return null;
+
+            Mapper.Map(materiaDto, materia);
+
+            Context.SaveChanges();
+            return materia;
+        }
+
+        public Materia DeletaMateria(int id)
+        {
+            Materia materia = Context.tb_materia.FirstOrDefault(materia => materia.Id_Materia == id);
+            if (materia == null)
+                return null;
+
+            Context.Remove(materia);
+            Context.SaveChanges();
+            return materia;
         }
     }
 }

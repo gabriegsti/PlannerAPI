@@ -6,6 +6,7 @@ namespace PlannerAPI.Data.Dtos.Materia
     {
         public string Titulo { get; set; }
         public string Professor { get; set; }
+        public string Email { get; set; }
         public DateTime Data_Inicio { get; set; }
         public DateTime Data_Fim { get; set; }
     }
