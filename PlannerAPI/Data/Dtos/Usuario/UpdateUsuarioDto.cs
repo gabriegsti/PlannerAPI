@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace PlannerAPI.Data.Dtos
+namespace PlannerAPI.Data.Dtos.Usuario
 {
     public class UpdateUsuarioDto
     {

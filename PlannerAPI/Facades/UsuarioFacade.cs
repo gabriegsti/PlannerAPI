@@ -1,11 +1,9 @@
 ﻿using AutoMapper;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PlannerAPI.Data;
-using PlannerAPI.Data.Dtos;
+using PlannerAPI.Data.Dtos.Usuario;
 using PlannerAPI.Facades.Interfaces;
 using PlannerAPI.Model;
-using System.Collections.Generic;
 using System.Linq;
 
 namespace PlannerAPI.Facades

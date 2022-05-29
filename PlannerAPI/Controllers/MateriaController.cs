@@ -6,7 +6,7 @@ using PlannerAPI.Model;
 namespace PlannerAPI.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class MateriaController : ControllerBase
     {
         public IMateriaFacade MateriaFacade { get; set; }

@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using PlannerAPI.Data;
 using PlannerAPI.Data.Dtos;
+using PlannerAPI.Data.Dtos.Usuario;
 using PlannerAPI.Facades.Interfaces;
 using PlannerAPI.Model;
 using System.Collections.Generic;
@@ -10,7 +11,7 @@ namespace PlannerAPI.Controllers
 {
 
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class UsuarioController : ControllerBase
     {
         public IUsuarioFacade UsuarioFacade { get; set; }
