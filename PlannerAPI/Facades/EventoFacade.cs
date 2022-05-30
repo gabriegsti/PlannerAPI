@@ -35,7 +35,7 @@ namespace PlannerAPI.Facades
 
         public ReadEventoDto RecuperaEventoPorId(int id)
         {
-            Evento evento = Context.tb_evento.FirstOrDefault(evento => evento.id_evento == id);
+            Evento evento = Context.tb_evento.FirstOrDefault(evento => evento.Id_Evento == id);
             if (evento != null)
             {
                 ReadEventoDto eventoDto = Mapper.Map<ReadEventoDto>(evento);
@@ -46,7 +46,7 @@ namespace PlannerAPI.Facades
 
         public Evento AtualizaEvento(int id, UpdateEventoDto eventoNovo)
         {
-            Evento evento = Context.tb_evento.FirstOrDefault(evento => evento.id_evento == id);
+            Evento evento = Context.tb_evento.FirstOrDefault(evento => evento.Id_Evento == id);
 
             if (evento == null)
                 return null;
@@ -59,7 +59,7 @@ namespace PlannerAPI.Facades
 
         public Evento DeletaEvento(int id)
         {
-            Evento evento = Context.tb_evento.FirstOrDefault(evento => evento.id_evento == id);
+            Evento evento = Context.tb_evento.FirstOrDefault(evento => evento.Id_Evento == id);
             if (evento == null)
                 return null;
 

@@ -7,6 +7,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using PlannerAPI.Data;
 using PlannerAPI.Facades;
+using PlannerAPI.Facades.Facades;
 using PlannerAPI.Facades.Interfaces;
 using System;
 
@@ -35,6 +36,11 @@ namespace PlannerAPI
 
             services.AddTransient<IUsuarioFacade, UsuarioFacade>();
             services.AddTransient<IMateriaFacade, MateriaFacade>();
+            services.AddTransient<IEventoFacade, EventoFacade>();
+            services.AddTransient<IAvaliacaoFacade, AvaliacaoFacade>();
+            services.AddTransient<IAulaFacade, AulaFacade>();
+            services.AddTransient<IAnotacaoFacade, AnotacaoFacade>();
+
 
         }
 

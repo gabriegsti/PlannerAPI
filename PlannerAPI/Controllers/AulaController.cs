@@ -25,7 +25,7 @@ namespace PlannerAPI.Controllers
         [HttpGet]
         public IActionResult RecuperaAulas()
         {
-            return Ok(AulaFacade.RecuperaAulas());
+            return Ok(AulaFacade.RecuperaAula());
         }
 
         [HttpGet("{id}")]

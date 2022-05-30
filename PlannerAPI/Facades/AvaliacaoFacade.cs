@@ -22,6 +22,19 @@ namespace PlannerAPI.Facades.Facades
         public Avaliacao AdicionaAvaliacao(CreateAvaliacaoDto avaliacaoDto)
         {
             Avaliacao avaliacao = Mapper.Map<Avaliacao>(avaliacaoDto);
+            
+            Materia materia = Context.tb_materia.FirstOrDefault(materia => materia.Id_Materia == avaliacao.Id_Materia);
+            
+            Evento evento = new Evento(avaliacao.Titulo, avaliacao.Data_Hora, materia.Id_Usuario);
+            
+            Context.tb_evento.Add(evento);
+            Context.SaveChanges();
+
+            var eventoInserido = Context.tb_evento.FirstOrDefault(e =>
+                e.Data_Hora == avaliacao.Data_Hora && e.Titulo == avaliacao.Titulo);
+            
+            avaliacao.Id_Evento = eventoInserido.Id_Evento;
+
             Context.tb_avaliacao.Add(avaliacao);
             Context.SaveChanges();
 
@@ -35,7 +48,7 @@ namespace PlannerAPI.Facades.Facades
 
         public ReadAvaliacaoDto RecuperaAvaliacaoPorId(int id)
         {
-            Avaliacao avaliacao = Context.tb_avaliacao.FirstOrDefault(avaliacao => avaliacao.id_avaliacao == id);
+            Avaliacao avaliacao = Context.tb_avaliacao.FirstOrDefault(avaliacao => avaliacao.Id_Avaliacao == id);
             if (avaliacao != null)
             {
                 ReadAvaliacaoDto avaliacaoDto = Mapper.Map<ReadAvaliacaoDto>(avaliacao);
@@ -46,7 +59,7 @@ namespace PlannerAPI.Facades.Facades
 
         public Avaliacao AtualizaAvaliacao(int id, UpdateAvaliacaoDto avaliacaoDto)
         {
-            Avaliacao avaliacao = Context.tb_avaliacao.FirstOrDefault(avaliacao => avaliacao.id_avaliacao == id);
+            Avaliacao avaliacao = Context.tb_avaliacao.FirstOrDefault(avaliacao => avaliacao.Id_Avaliacao == id);
 
             if (avaliacao == null)
                 return null;
