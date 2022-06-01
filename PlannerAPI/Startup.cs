@@ -26,7 +26,12 @@ namespace PlannerAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<PlannerContext>(options
-                => options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")).UseLowerCaseNamingConvention()); ;
+                =>
+            {
+                options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")).UseLowerCaseNamingConvention();
+                
+            });
+            AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

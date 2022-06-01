@@ -24,7 +24,6 @@ namespace PlannerAPI.Facades
             Aula aula = Mapper.Map<Aula>(aulaDto);
             Context.tb_aula.Add(aula);
             Context.SaveChanges();
-
             return aula;
         }
 
