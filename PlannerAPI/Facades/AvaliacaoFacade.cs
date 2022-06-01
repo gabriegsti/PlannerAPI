@@ -29,12 +29,9 @@ namespace PlannerAPI.Facades.Facades
             
             Context.tb_evento.Add(evento);
             Context.SaveChanges();
-
-            var eventoInserido = Context.tb_evento.FirstOrDefault(e =>
-                e.Data_Hora == avaliacao.Data_Hora && e.Titulo == avaliacao.Titulo);
             
-            avaliacao.Id_Evento = eventoInserido.Id_Evento;
-
+            avaliacao.Id_Evento = evento.Id_Evento;
+            
             Context.tb_avaliacao.Add(avaliacao);
             Context.SaveChanges();
 
