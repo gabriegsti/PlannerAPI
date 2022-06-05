@@ -54,5 +54,14 @@ namespace PlannerAPI.Controllers
                 return NotFound();
             return NoContent();
         }
+
+        [HttpGet("{texto:alpha}")]
+        public IActionResult RecuperaEventoPorTexto([FromQuery] string Texto)
+        {
+            var evento = EventoFacade.RecuperaEventoPorTexto(Texto);
+            if (evento != null)
+                return Ok(evento);
+            return NotFound();
+        }
     }
 }

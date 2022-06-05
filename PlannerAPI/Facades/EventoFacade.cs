@@ -4,6 +4,7 @@ using PlannerAPI.Data;
 using PlannerAPI.Data.Dtos.Evento;
 using PlannerAPI.Facades.Interfaces;
 using PlannerAPI.Model;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace PlannerAPI.Facades
@@ -66,6 +67,11 @@ namespace PlannerAPI.Facades
             Context.Remove(evento);
             Context.SaveChanges();
             return evento;
+        }
+
+        public List<Evento> RecuperaEventoPorTexto(string texto)
+        {
+            return Context.tb_evento.Where(evento => evento.Titulo.ToLower().Contains(texto.ToLower())).ToList<Evento>();
         }
     }
 }

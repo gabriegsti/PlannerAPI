@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PlannerAPI.Data.Dtos.Aula;
 using PlannerAPI.Model;
+using System.Collections.Generic;
 
 namespace PlannerAPI.Facades.Interfaces
 {
@@ -11,5 +12,6 @@ namespace PlannerAPI.Facades.Interfaces
         ReadAulaDto RecuperaAulaPorId(int id);
         Aula AtualizaAula(int id, UpdateAulaDto aulaNova);
         Aula DeletaAula(int id);
+        List<Aula> RecuperaAulaPorTexto(string texto);
     }
 }

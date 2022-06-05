@@ -71,7 +71,7 @@ namespace PlannerAPI.Facades
         }
         public List<Anotacao> RecuperaAnotacaoPorTexto(string texto)
         {
-            return Context.tb_anotacao.Where(anotacao => anotacao.Campo_Texto.Contains(texto) || anotacao.Titulo.Contains(texto)).ToList<Anotacao>();
+            return Context.tb_anotacao.Where(anotacao => anotacao.Campo_Texto.ToLower().Contains(texto.ToLower()) || anotacao.Titulo.ToLower().Contains(texto.ToLower())).ToList<Anotacao>();
         }
     }
 }

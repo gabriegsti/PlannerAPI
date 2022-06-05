@@ -55,5 +55,13 @@ namespace PlannerAPI.Controllers
             return NoContent();
         }
 
+        [HttpGet("{texto:alpha}")]
+        public IActionResult RecuperaAulaoPorTexto([FromQuery] string Texto)
+        {
+            var aula = AulaFacade.RecuperaAulaPorTexto(Texto);
+            if (aula != null)
+                return Ok(aula);
+            return NotFound();
+        }
     }
 }

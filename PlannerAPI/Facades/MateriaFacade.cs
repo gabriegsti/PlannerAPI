@@ -4,6 +4,7 @@ using PlannerAPI.Data;
 using PlannerAPI.Data.Dtos.Materia;
 using PlannerAPI.Facades.Interfaces;
 using PlannerAPI.Model;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace PlannerAPI.Facades
@@ -65,6 +66,10 @@ namespace PlannerAPI.Facades
             Context.Remove(materia);
             Context.SaveChanges();
             return materia;
+        }
+        public List<Materia> RecuperaMateriaPorTexto(string texto)
+        {
+            return Context.tb_materia.Where(materia => materia.Professor.ToLower().Contains(texto.ToLower()) || materia.Titulo.ToLower().Contains(texto.ToLower())).ToList<Materia>();
         }
     }
 }

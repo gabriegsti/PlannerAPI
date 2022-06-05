@@ -54,6 +54,15 @@ namespace PlannerAPI.Controllers
             return NoContent();
         }
 
+        [HttpGet("{texto:alpha}")]
+        public IActionResult RecuperaMateriaPorTexto([FromQuery] string Texto)
+        {
+            var materia = MateriaFacade.RecuperaMateriaPorTexto(Texto);
+            if (materia != null)
+                return Ok(materia);
+            return NotFound();
+        }
+
     }
 
 }

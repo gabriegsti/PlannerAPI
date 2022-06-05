@@ -47,7 +47,7 @@ namespace PlannerAPI.Controllers
             return NoContent();
         }
 
-        [HttpDelete("{id:int}")]
+        [HttpDelete("{id}")]
         public IActionResult DeletaAnotacao(int id)
         {
             Anotacao anotacao = AnotacaoFacade.DeletaAnotacao(id);
@@ -55,6 +55,7 @@ namespace PlannerAPI.Controllers
                 return NotFound();
             return NoContent();
         }
+
         [HttpGet("{texto:alpha}")]
         public IActionResult RecuperaAnotacaoPorTexto([FromQuery] string Texto)
         {

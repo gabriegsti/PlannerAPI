@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PlannerAPI.Data.Dtos.Evento;
 using PlannerAPI.Model;
+using System.Collections.Generic;
 
 namespace PlannerAPI.Facades.Interfaces
 {
@@ -11,5 +12,6 @@ namespace PlannerAPI.Facades.Interfaces
         public ReadEventoDto RecuperaEventoPorId(int id);
         public Evento AtualizaEvento(int id, UpdateEventoDto eventoNovo);
         public Evento DeletaEvento(int id);
+        List<Evento> RecuperaEventoPorTexto(string texto);
     }
 }

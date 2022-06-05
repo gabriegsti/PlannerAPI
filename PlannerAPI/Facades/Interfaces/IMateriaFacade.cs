@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PlannerAPI.Data.Dtos.Materia;
 using PlannerAPI.Model;
+using System.Collections.Generic;
 
 namespace PlannerAPI.Facades.Interfaces
 {
@@ -11,5 +12,6 @@ namespace PlannerAPI.Facades.Interfaces
         ReadMateriaDto RecuperaMateriaPorId(int id);
         Materia AtualizaMateria(int id, UpdateMateriaDto materiaNova);
         Materia DeletaMateria(int id);
+        List<Materia> RecuperaMateriaPorTexto(string texto);
     }
 }

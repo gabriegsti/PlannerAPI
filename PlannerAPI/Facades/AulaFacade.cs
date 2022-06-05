@@ -4,6 +4,7 @@ using PlannerAPI.Data;
 using PlannerAPI.Data.Dtos.Aula;
 using PlannerAPI.Facades.Interfaces;
 using PlannerAPI.Model;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace PlannerAPI.Facades
@@ -65,6 +66,11 @@ namespace PlannerAPI.Facades
             Context.Remove(aula);
             Context.SaveChanges();
             return aula;
+        }
+
+        public List<Aula> RecuperaAulaPorTexto(string texto)
+        {
+            return Context.tb_aula.Where(aula => aula.titulo.ToLower().Contains(texto.ToLower())).ToList<Aula>();
         }
     }
 }
