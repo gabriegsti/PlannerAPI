@@ -5,13 +5,12 @@ namespace PlannerAPI.Model
     public class Anotacao
     {
         [Key]
+        public int Id_Anotacao { get; set; }
         [Required]
-        public int id_anotacao { get; set; }
-        [Required]
-        public int id_aula { get; set; }
+        public int Id_Aula { get; set; }
         [Required(ErrorMessage = "O campo titulo é obrigatório")]
-        public string titulo { get; set; }
-        public string campo_texto { get; set; }
+        public string Titulo { get; set; }
+        public string Campo_Texto { get; set; }
 
     }
 }

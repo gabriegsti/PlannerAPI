@@ -34,7 +34,7 @@ namespace PlannerAPI.Facades
 
         public ReadAulaDto RecuperaAulaPorId(int id)
         {
-            Aula aula = Context.tb_aula.FirstOrDefault(aula => aula.id_aula == id);
+            Aula aula = Context.tb_aula.FirstOrDefault(aula => aula.id_Aula == id);
             if (aula != null)
             {
                 ReadAulaDto aulaDto = Mapper.Map<ReadAulaDto>(aula);
@@ -45,7 +45,7 @@ namespace PlannerAPI.Facades
 
         public Aula AtualizaAula(int id, UpdateAulaDto aulaDto)
         {
-            Aula aula = Context.tb_aula.FirstOrDefault(Aula => Aula.id_aula == id);
+            Aula aula = Context.tb_aula.FirstOrDefault(aula => aula.id_Aula == id);
 
             if (aula == null)
                 return null;
@@ -58,7 +58,7 @@ namespace PlannerAPI.Facades
 
         public Aula DeletaAula(int id)
         {
-            Aula aula = Context.tb_aula.FirstOrDefault(aula => aula.id_aula == id);
+            Aula aula = Context.tb_aula.FirstOrDefault(aula => aula.id_Aula == id);
             if (aula == null)
                 return null;
 

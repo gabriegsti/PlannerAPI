@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using PlannerAPI.Data.Dtos.Anotacao;
+using PlannerAPI.Data.Dtos;
 using PlannerAPI.Model;
+using System.Collections.Generic;
 
 namespace PlannerAPI.Facades.Interfaces
 {
@@ -11,5 +12,6 @@ namespace PlannerAPI.Facades.Interfaces
         ReadAnotacaoDto RecuperaAnotacaoPorId(int id);
         Anotacao AtualizaAnotacao(int id, UpdateAnotacaoDto AnotacaoNova);
         Anotacao DeletaAnotacao(int id);
+        List<Anotacao> RecuperaAnotacaoPorTexto(string texto);
     }
 }

@@ -7,7 +7,7 @@ namespace PlannerAPI.Data.Dtos.Aula
     {
         [Key]
         [Required]
-        public int id_aula { get; set; }
+        public int id_Aula { get; set; }
         [Required]
         public int id_materia { get; set; }
         [Required(ErrorMessage = "O campo titulo é obrigatório.")]

@@ -1,9 +1,11 @@
 ﻿using AutoMapper;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json.Linq;
 using PlannerAPI.Data;
-using PlannerAPI.Data.Dtos.Anotacao;
+using PlannerAPI.Data.Dtos;
 using PlannerAPI.Facades.Interfaces;
 using PlannerAPI.Model;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace PlannerAPI.Facades
@@ -35,7 +37,7 @@ namespace PlannerAPI.Facades
 
         public ReadAnotacaoDto RecuperaAnotacaoPorId(int id)
         {
-            Anotacao anotacao = Context.tb_anotacao.FirstOrDefault(anotacao => anotacao.id_anotacao == id);
+            Anotacao anotacao = Context.tb_anotacao.FirstOrDefault(anotacao => anotacao.Id_Anotacao == id);
             if (anotacao != null)
             {
                 ReadAnotacaoDto anotacaoDto = Mapper.Map<ReadAnotacaoDto>(anotacao);
@@ -44,14 +46,14 @@ namespace PlannerAPI.Facades
             return null;
         }
 
-        public Anotacao AtualizaAnotacao(int id, UpdateAnotacaoDto AnotacaoDto)
+        public Anotacao AtualizaAnotacao(int id, UpdateAnotacaoDto anotacaoDto)
         {
-            Anotacao anotacao = Context.tb_anotacao.FirstOrDefault(Anotacao => Anotacao.id_anotacao == id);
+            Anotacao anotacao = Context.tb_anotacao.FirstOrDefault(anotacao => anotacao.Id_Anotacao == id);
 
             if (anotacao == null)
                 return null;
 
-            Mapper.Map(AnotacaoDto, anotacao);
+            Mapper.Map(anotacaoDto, anotacao);
 
             Context.SaveChanges();
             return anotacao;
@@ -59,13 +61,17 @@ namespace PlannerAPI.Facades
 
         public Anotacao DeletaAnotacao(int id)
         {
-            Anotacao anotacao = Context.tb_anotacao.FirstOrDefault(Anotacao => Anotacao.id_anotacao == id);
+            Anotacao anotacao = Context.tb_anotacao.FirstOrDefault(Anotacao => Anotacao.Id_Anotacao == id);
             if (anotacao == null)
                 return null;
 
             Context.Remove(anotacao);
             Context.SaveChanges();
             return anotacao;
+        }
+        public List<Anotacao> RecuperaAnotacaoPorTexto(string texto)
+        {
+            return Context.tb_anotacao.Where(anotacao => anotacao.Campo_Texto.Contains(texto)).ToList<Anotacao>();
         }
     }
 }

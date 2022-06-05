@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using PlannerAPI.Data.Dtos.Anotacao;
+using PlannerAPI.Data.Dtos;
 using PlannerAPI.Model;
 
 namespace PlannerAPI.Profiles
