@@ -12,6 +12,6 @@ namespace PlannerAPI.Facades.Interfaces
         public ReadEventoDto RecuperaEventoPorId(int id);
         public Evento AtualizaEvento(int id, UpdateEventoDto eventoNovo);
         public Evento DeletaEvento(int id);
-        List<Evento> RecuperaEventoPorTexto(string texto);
+        public List<Evento> RecuperaEventoPorTexto(string texto);
     }
 }
