@@ -12,7 +12,7 @@ namespace PlannerAPI.Data.Dtos.Avaliacao
         public int Id_Materia { get; set; }
         [Required(ErrorMessage = "O campo titulo é obrigatório")]
         public string Titulo { get; set; }
-        public double Nota { get; set; }
+        public double? Nota { get; set; }
         public DateTime? Data_Hora { get; set; }
         public int Id_Evento { get; set; }
     }

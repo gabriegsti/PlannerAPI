@@ -10,6 +10,6 @@ namespace PlannerAPI.Data.Dtos.Avaliacao
         [Required]
         public string Titulo { get; set; }
         public DateTime Data_Hora { get; set; }
-        public double Nota { get; set; }
+        public double? Nota { get; set; }
     }
 }
