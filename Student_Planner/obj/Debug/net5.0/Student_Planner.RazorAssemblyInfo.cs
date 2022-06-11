@@ -11,13 +11,10 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("PlannerAPI")]
-[assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
-[assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyProductAttribute("PlannerAPI")]
-[assembly: System.Reflection.AssemblyTitleAttribute("PlannerAPI")]
-[assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
+[assembly: Microsoft.AspNetCore.Mvc.ApplicationParts.RelatedAssemblyAttribute("Student_Planner.Views")]
+[assembly: Microsoft.AspNetCore.Razor.Hosting.RazorLanguageVersionAttribute("5.0")]
+[assembly: Microsoft.AspNetCore.Razor.Hosting.RazorConfigurationNameAttribute("MVC-3.0")]
+[assembly: Microsoft.AspNetCore.Razor.Hosting.RazorExtensionAssemblyNameAttribute("MVC-3.0", "Microsoft.AspNetCore.Mvc.Razor.Extensions")]
 
 // Gerado pela classe WriteCodeFragment do MSBuild.
 

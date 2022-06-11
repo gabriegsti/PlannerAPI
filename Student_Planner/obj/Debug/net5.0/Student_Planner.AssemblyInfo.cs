@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("PlannerAPI")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("Student_Planner")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyProductAttribute("PlannerAPI")]
-[assembly: System.Reflection.AssemblyTitleAttribute("PlannerAPI")]
+[assembly: System.Reflection.AssemblyProductAttribute("Student_Planner")]
+[assembly: System.Reflection.AssemblyTitleAttribute("Student_Planner")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Gerado pela classe WriteCodeFragment do MSBuild.
