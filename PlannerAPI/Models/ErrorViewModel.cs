@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace PlannerAPI.Model
+namespace PlannerAPI.Models
 {
     public class ErrorViewModel
     {

@@ -2,7 +2,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace PlannerAPI.Model
+namespace PlannerAPI.Models
 {
     public class Avaliacao : IAgendavel
     {

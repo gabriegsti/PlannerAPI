@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PlannerAPI.Data.Dtos.Materia;
-using PlannerAPI.Model;
+using PlannerAPI.Models;
 using System.Collections.Generic;
 
 namespace PlannerAPI.Facades.Interfaces

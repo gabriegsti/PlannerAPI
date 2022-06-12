@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using PlannerAPI.Data;
 using PlannerAPI.Data.Dtos.Aula;
 using PlannerAPI.Facades.Interfaces;
-using PlannerAPI.Model;
+using PlannerAPI.Models;
 using System.Collections.Generic;
 using System.Linq;
 

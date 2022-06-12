@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using PlannerAPI.Data.Dtos.Usuario;
-using PlannerAPI.Model;
+using PlannerAPI.Models;
 
 namespace PlannerAPI.Profiles
 {

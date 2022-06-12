@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PlannerAPI.Data.Dtos;
 using PlannerAPI.Data.Dtos.Usuario;
-using PlannerAPI.Model;
+using PlannerAPI.Models;
 
 namespace PlannerAPI.Facades.Interfaces
 {

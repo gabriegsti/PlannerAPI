@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using PlannerAPI.Data.Dtos.Evento;
 using PlannerAPI.Facades.Interfaces;
-using PlannerAPI.Model;
+using PlannerAPI.Models;
 
 namespace PlannerAPI.Controllers
 {

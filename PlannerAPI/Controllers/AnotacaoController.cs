@@ -1,9 +1,7 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using PlannerAPI.Data.Dtos;
 using PlannerAPI.Facades.Interfaces;
-using PlannerAPI.Model;
-using System.Text.Json;
+using PlannerAPI.Models;
 
 namespace PlannerAPI.Controllers
 {

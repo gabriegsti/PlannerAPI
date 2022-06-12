@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using PlannerAPI.Data;
 using PlannerAPI.Data.Dtos.Avaliacao;
 using PlannerAPI.Facades.Interfaces;
-using PlannerAPI.Model;
+using PlannerAPI.Models;
 using System.Linq;
 
 namespace PlannerAPI.Facades.Facades

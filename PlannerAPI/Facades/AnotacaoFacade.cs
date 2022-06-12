@@ -4,7 +4,7 @@ using Newtonsoft.Json.Linq;
 using PlannerAPI.Data;
 using PlannerAPI.Data.Dtos;
 using PlannerAPI.Facades.Interfaces;
-using PlannerAPI.Model;
+using PlannerAPI.Models;
 using System.Collections.Generic;
 using System.Linq;
 

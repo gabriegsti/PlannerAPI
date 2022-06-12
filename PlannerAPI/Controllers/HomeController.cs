@@ -1,12 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using PlannerAPI.Controllers;
-using PlannerAPI.Model;
-using System;
-using System.Collections.Generic;
+using PlannerAPI.Models;
 using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace PlannerAPI.Controllers
 {
