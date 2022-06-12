@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gabri\\source\\repos\\PlannerAPI\\PlannerAPI\\PlannerAPI.csproj": {}
+    "C:\\Users\\Luiz Alberto\\Desktop\\Student_Planner\\PlannerAPI\\PlannerAPI\\PlannerAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gabri\\source\\repos\\PlannerAPI\\PlannerAPI\\PlannerAPI.csproj": {
+    "C:\\Users\\Luiz Alberto\\Desktop\\Student_Planner\\PlannerAPI\\PlannerAPI\\PlannerAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gabri\\source\\repos\\PlannerAPI\\PlannerAPI\\PlannerAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Luiz Alberto\\Desktop\\Student_Planner\\PlannerAPI\\PlannerAPI\\PlannerAPI.csproj",
         "projectName": "PlannerAPI",
-        "projectPath": "C:\\Users\\gabri\\source\\repos\\PlannerAPI\\PlannerAPI\\PlannerAPI.csproj",
-        "packagesPath": "C:\\Users\\gabri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gabri\\source\\repos\\PlannerAPI\\PlannerAPI\\obj\\",
+        "projectPath": "C:\\Users\\Luiz Alberto\\Desktop\\Student_Planner\\PlannerAPI\\PlannerAPI\\PlannerAPI.csproj",
+        "packagesPath": "C:\\Users\\Luiz Alberto\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Luiz Alberto\\Desktop\\Student_Planner\\PlannerAPI\\PlannerAPI\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\gabri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Luiz Alberto\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -89,7 +93,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }
