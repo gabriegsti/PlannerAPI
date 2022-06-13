@@ -16,6 +16,9 @@
         .modal-content{
             width: 300px;
         }
+        .list-group-item:hover{
+            background-color: rgba(59,57,57,0.164)!important;
+        }
     </style>
 
 </head>
@@ -25,7 +28,7 @@
                 <!-- As a heading -->
 <nav class="navbar navbar-light bg-light shadow">
     <div class="container-fluid">
-        <span class="navbar-brand mb-0 h1">Navbar</span>
+        <span class="navbar-brand mb-0 h1">Student Planner</span>
             <button class="navbar-toggler" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
             <span class="navbar-toggler-icon"></span>
     </button>
@@ -38,12 +41,21 @@
   <div class="modal-dialog modal-fullscreen">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Menu</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Student Planner</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
+  
       <div class="modal-body">
-        ...
+        <ul class="list-group list-group-flush">
+  <li class="list-group-item"><button class="btn btn-primary btn-lg btn-block" type="button">Eventos</button><br/></li>
+  <li class="list-group-item"><button class="btn btn-primary btn-lg btn-block" type="button">Materias</button><br/></li>
+  <li class="list-group-item">  <button class="btn btn-primary btn-lg btn-block" type="button">Anotações</button><br/></li>
+  <li class="list-group-item"><button class="btn btn-primary btn-lg btn-block" type="button">Avaliações</button><br/></li>
+  <li class="list-group-item"><button class="btn btn-primary btn-lg btn-block" type="button">Notas</button><br/></li>
+</ul>
       </div>
+
+
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         
