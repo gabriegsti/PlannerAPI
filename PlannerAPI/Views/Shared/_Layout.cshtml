@@ -24,19 +24,15 @@
 </head>
 <body>
 
-
-                <!-- As a heading -->
 <nav class="navbar navbar-light bg-light shadow">
     <div class="container-fluid">
         <span class="navbar-brand mb-0 h1">Student Planner</span>
             <button class="navbar-toggler" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
             <span class="navbar-toggler-icon"></span>
-    </button>
+            </button>
     </div>
-  
 </nav>
 
-<!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-fullscreen">
     <div class="modal-content">
@@ -46,18 +42,28 @@
       </div>
   
       <div class="modal-body">
-        <ul class="list-group list-group-flush">
-  <li class="list-group-item"><button class="btn btn-primary btn-lg btn-block" type="button">Eventos</button><br/></li>
-  <li class="list-group-item"><button class="btn btn-primary btn-lg btn-block" type="button">Materias</button><br/></li>
-  <li class="list-group-item">  <button class="btn btn-primary btn-lg btn-block" type="button">Anotações</button><br/></li>
-  <li class="list-group-item"><button class="btn btn-primary btn-lg btn-block" type="button">Avaliações</button><br/></li>
-  <li class="list-group-item"><button class="btn btn-primary btn-lg btn-block" type="button">Notas</button><br/></li>
-</ul>
+        <div class="d-grid gap-2 col-12 mx-auto" style="width: 1500px;">
+            <a asp-controller="Home" asp-action="Eventos">
+	            <button class="btn btn-primary btn-lg btn-block" type="button">Eventos</button>
+            </a><br/>
+            <a asp-controller="Home" asp-action="Materias">
+	            <button class="btn btn-primary btn-lg btn-block" type="button">Matérias</button>
+            </a><br/>
+            <a asp-controller="Home" asp-action="Anotacoes">
+	            <button class="btn btn-primary btn-lg btn-block" type="button">Anotações</button>
+            </a><br/>
+            <a asp-controller="Home" asp-action="Avaliacoes">
+	            <button class="btn btn-primary btn-lg btn-block" type="button">Avaliações</button>
+            </a><br/>
+            <a asp-controller="Home" asp-action="Notas">
+	            <button class="btn btn-primary btn-lg btn-block" type="button">Notas</button>
+            </a><br/>
+        </div> 
       </div>
-
+      
 
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sair</button>
         
       </div>
     </div>
