@@ -1,13 +1,19 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Configuration;
 using PlannerAPI.Models;
 using System;
 using System.Diagnostics;
 
-namespace PlannerAPI.Controllers
+namespace PlannerAPI.ControllersViews
 {
     public class HomeController : Controller
     {
+        public IConfiguration configuration;
+        public HomeController(IConfiguration configuration)
+        {
+
+        }
+
         public IActionResult Index()
         {
             return View();
@@ -20,14 +26,8 @@ namespace PlannerAPI.Controllers
 
         public IActionResult Eventos()
         {
-            Evento evento = new Evento
-            {
-                Titulo = "Evento da home controller",
-                Id_Usuario = 1,
-                Data_Hora = DateTime.Parse("2022 - 05 - 31T18:30:15")
-            };
 
-            return View(evento);
+            return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
