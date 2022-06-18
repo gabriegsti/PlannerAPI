@@ -120,4 +120,4 @@ C:\Users\Luiz Alberto\Desktop\Student_Planner\PlannerAPI\PlannerAPI\obj\Debug\ne
 C:\Users\Luiz Alberto\Desktop\Student_Planner\PlannerAPI\PlannerAPI\obj\Debug\net5.0\PlannerAPI.pdb
 C:\Users\Luiz Alberto\Desktop\Student_Planner\PlannerAPI\PlannerAPI\obj\Debug\net5.0\PlannerAPI.genruntimeconfig.cache
 C:\Users\Luiz Alberto\Desktop\Student_Planner\PlannerAPI\PlannerAPI\obj\Debug\net5.0\ref\PlannerAPI.dll
-C:\Users\Luiz Alberto\Desktop\Student_Planner\PlannerAPI\PlannerAPI\obj\Debug\net5.0\Razor\Views\Home\Eventos.cshtml.g.cs
+C:\Users\Luiz Alberto\Desktop\Student_Planner\PlannerAPI\PlannerAPI\obj\Debug\net5.0\Razor\Views\Home\Materia.cshtml.g.cs

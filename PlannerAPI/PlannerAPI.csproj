@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Views\Menu\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
