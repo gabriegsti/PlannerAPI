@@ -5,6 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using PlannerAPI.ControllersViews;
 using PlannerAPI.Data;
 using PlannerAPI.Facades;
 using PlannerAPI.Facades.Facades;
@@ -46,7 +47,8 @@ namespace PlannerAPI
             services.AddTransient<IAvaliacaoFacade, AvaliacaoFacade>();
             services.AddTransient<IAulaFacade, AulaFacade>();
             services.AddTransient<IAnotacaoFacade, AnotacaoFacade>();
-
+            services.AddHttpClient<EventosController>();
+            
 
         }
 
@@ -76,7 +78,7 @@ namespace PlannerAPI
                 //endpoints.MapControllers();
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Eventos}/{action=Index}/{id?}");
             });
         }
     }

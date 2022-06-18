@@ -60,3 +60,7 @@ C:\Users\gabri\source\repos\PlannerAPI\PlannerAPI\obj\Debug\net5.0\PlannerAPI.pd
 C:\Users\gabri\source\repos\PlannerAPI\PlannerAPI\obj\Debug\net5.0\PlannerAPI.genruntimeconfig.cache
 C:\Users\gabri\source\repos\PlannerAPI\PlannerAPI\obj\Debug\net5.0\ref\PlannerAPI.dll
 C:\Users\gabri\source\repos\PlannerAPI\PlannerAPI\obj\Debug\net5.0\Razor\Views\Eventos\Index.cshtml.g.cs
+C:\Users\gabri\source\repos\PlannerAPI\PlannerAPI\obj\Debug\net5.0\Razor\Views\Eventos\Apagar.cshtml.g.cs
+C:\Users\gabri\source\repos\PlannerAPI\PlannerAPI\obj\Debug\net5.0\Razor\Views\Eventos\Criar.cshtml.g.cs
+C:\Users\gabri\source\repos\PlannerAPI\PlannerAPI\obj\Debug\net5.0\Razor\Views\Eventos\Editar.cshtml.g.cs
+C:\Users\gabri\source\repos\PlannerAPI\PlannerAPI\obj\Debug\net5.0\Razor\Views\Shared\EditorTemplates\Date.cshtml.g.cs
