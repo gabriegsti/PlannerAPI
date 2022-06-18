@@ -5,9 +5,13 @@
 
 <div class="text-center">  
     <h1 class="display-4">Eventos</h1>
-    <div class="">
-        <a class="btn btn-primary" role="button" asp-controller="Eventos" asp-action="Criar">Adicionar novo evento </a>
-    </div>
+  @using(Html.BeginForm("Index", "Eventos")) 
+  {
+   <label for="texto">Search in the name</label>
+   <input type="text" name="texto" id="textoid" class="col-md-3"/>
+   <input class="btn btn-default" type="submit" value="Pesquisar" asp-controller="Eventos" asp-action="Index"/>
+   <a class="btn btn-primary" role="button" asp-controller="Eventos" asp-action="Criar">Adicionar novo evento </a>
+   
     <br />
     <table class="table">
       <thead>
@@ -26,13 +30,14 @@
           <td> 
             <div class="btn-group" role="group">
               <a role="button" class="btn btn-primary" 
-                    asp-controller="Eventos" asp-action="Editar">Editar</a>
+                   asp-route-id="@evento.Id_Evento" asp-controller="Eventos" asp-action="Editar">Editar</a>
               <a role="button" class="btn btn-danger"
-                    asp-controller="Eventos" asp-action="Apagar">Apagar</a>
+                    asp-route-id="@evento.Id_Evento" asp-controller="Eventos" asp-action="Apagar">Apagar</a>
             </div>
           </td>
         </tr>
         }
       </tbody>
     </table>
+}
 </div>

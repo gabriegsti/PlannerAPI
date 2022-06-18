@@ -16,7 +16,7 @@ namespace PlannerAPI.Models
         //[DataType(DataType.DateTime)]
         [JsonPropertyName("data_Hora")]
         [DataType(DataType.DateTime)]
-        [DisplayFormat(ApplyFormatInEditMode =true, DataFormatString = "{0:dd/MM/yyyy HH:mm}")]
+        [DisplayFormat(ApplyFormatInEditMode =true)]
         public DateTime? Data_Hora { get; set; }
         [JsonPropertyName("id_Usuario")]
         public int Id_Usuario { get; set; }

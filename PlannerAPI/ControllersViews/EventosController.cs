@@ -23,12 +23,24 @@ namespace PlannerAPI.ControllersViews
             BaseUrl = configuration.GetValue<string>("BaseUrl");
 
         }
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string texto)
         {
-            var response = await HttpClient.GetFromJsonAsync<List<Evento>>(BaseUrl + "Evento");
+            var response = await HttpClient.GetFromJsonAsync<List<Evento>>(BaseUrl + "Evento" + "/" + texto);
 
             if (response != null)
-            { 
+            {
+                ViewBag.eventos = response;
+                return View();
+            }
+            return View();
+        }
+
+        public async Task<IActionResult> BuscaTexto(string texto)
+        {
+            var response = await HttpClient.GetFromJsonAsync<List<Evento>>(BaseUrl + "Evento" + "/" + texto);
+
+            if (response != null)
+            {
                 ViewBag.eventos = response;
                 return View();
             }
@@ -47,13 +59,50 @@ namespace PlannerAPI.ControllersViews
             await HttpClient.PostAsJsonAsync<Evento>(BaseUrl + "Evento", evento);
             return RedirectToAction("Index");
         }
-        public IActionResult Editar()
+        public async Task<IActionResult> Editar(int id)
         {
-           return View();
+            Evento evento = await HttpClient.GetFromJsonAsync<Evento>(BaseUrl + "Evento" + "/" + id.ToString());
+            return View(evento);
         }
-        public IActionResult Apagar()
+
+        [HttpPost]
+        public async Task<IActionResult> AlteraEvento(Evento evento)
         {
-           return View();
+            await HttpClient
+                .PutAsJsonAsync<Evento>
+                (BaseUrl +
+                "Evento/" +
+                evento.Id_Evento.ToString(),
+                evento);
+            return RedirectToAction("Index");
         }
+        public async Task<IActionResult> Apagar(int id)
+        {
+            Evento evento = await HttpClient.GetFromJsonAsync<Evento>(BaseUrl + "Evento" + "/" + id.ToString());
+            return View(evento);
+        }
+
+        public async Task<IActionResult> ConfirmaExclusao(int id )
+        {
+            await HttpClient
+                           .DeleteAsync
+                           (BaseUrl +
+                           "Evento/" +
+                           id.ToString()
+                           );
+            return RedirectToAction("Index");
+        }
+
+        //public async Task<IActionResult> Search(string texto)
+        //{
+
+        //    await HttpClient
+        //                   .DeleteAsync(
+        //                    BaseUrl +
+        //                   "Evento/" +
+        //                    texto
+        //                   );
+        //    return RedirectToAction("Index");
+        //}
     }
 }

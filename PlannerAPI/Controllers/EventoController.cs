@@ -56,7 +56,7 @@ namespace PlannerAPI.Controllers
         }
 
         [HttpGet("{texto:alpha}")]
-        public IActionResult RecuperaEventoPorTexto([FromQuery] string Texto)
+        public IActionResult RecuperaEventoPorTexto( string Texto)
         {
             var evento = EventoFacade.RecuperaEventoPorTexto(Texto);
             if (evento != null)
