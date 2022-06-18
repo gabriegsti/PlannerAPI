@@ -18,16 +18,9 @@ namespace PlannerAPI.Controllers
             return View();
         }
 
-        public IActionResult Eventos()
+        public IActionResult Materia()
         {
-            Evento evento = new Evento
-            {
-                Titulo = "Evento da home controller",
-                Id_Usuario = 1,
-                Data_Hora = DateTime.Parse("2022 - 05 - 31T18:30:15")
-            };
-
-            return View(evento);
+            return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

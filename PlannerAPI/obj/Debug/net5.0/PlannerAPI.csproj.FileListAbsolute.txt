@@ -59,4 +59,3 @@ C:\Users\gabri\source\repos\PlannerAPI\PlannerAPI\obj\Debug\net5.0\refint\Planne
 C:\Users\gabri\source\repos\PlannerAPI\PlannerAPI\obj\Debug\net5.0\PlannerAPI.pdb
 C:\Users\gabri\source\repos\PlannerAPI\PlannerAPI\obj\Debug\net5.0\PlannerAPI.genruntimeconfig.cache
 C:\Users\gabri\source\repos\PlannerAPI\PlannerAPI\obj\Debug\net5.0\ref\PlannerAPI.dll
-C:\Users\gabri\source\repos\PlannerAPI\PlannerAPI\obj\Debug\net5.0\Razor\Views\Home\Eventos.cshtml.g.cs
