@@ -23,7 +23,6 @@
 
 </head>
 <body>
-<<<<<<< HEAD
 
 <nav class="navbar navbar-light bg-light shadow">
     <div class="container-fluid">
@@ -44,20 +43,25 @@
   
       <div class="modal-body">
         <div class="d-grid gap-2 col-12 mx-auto" style="width: 1500px;">
-            <a asp-controller="Menu" asp-action="Eventos">
-	            <button class="btn btn-primary btn-lg btn-block" type="button">Eventos</button>
+            <a asp-controller="Eventos" asp-action="Index"  role="button" class="btn btn-primary btn-lg btn-block">
+	            Eventos
+            </a>
+            
+            <br/>
+            
+            <a asp-controller="Home" asp-action="Materia" class="btn btn-primary btn-lg btn-block" role="button">
+	            Matérias
+            </a>
+            
+            <br/>
+            <a asp-controller="Home" asp-action="Anotacoes"  class="btn btn-primary btn-lg btn-block" role="button" >
+	           Anotações
             </a><br/>
-            <a asp-controller="Home" asp-action="Materia">
-	            <button class="btn btn-primary btn-lg btn-block" type="button">Matérias</button>
+            <a asp-controller="Home" asp-action="Avaliacoes" class="btn btn-primary btn-lg btn-block" type="button">
+	            Avaliações
             </a><br/>
-            <a asp-controller="Home" asp-action="Anotacoes">
-	            <button class="btn btn-primary btn-lg btn-block" type="button">Anotações</button>
-            </a><br/>
-            <a asp-controller="Home" asp-action="Avaliacoes">
-	            <button class="btn btn-primary btn-lg btn-block" type="button">Avaliações</button>
-            </a><br/>
-            <a asp-controller="Home" asp-action="Notas">
-	            <button class="btn btn-primary btn-lg btn-block" type="button">Notas</button>
+            <a asp-controller="Home" asp-action="Notas" class="btn btn-primary btn-lg btn-block" type="button">
+                Notas
             </a><br/>
         </div> 
       </div>
@@ -71,32 +75,6 @@
   </div>
 </div>
 
-=======
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Student_Planner</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Eventos" asp-action="Privacy">Eventos</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
->>>>>>> ab293ff68a32a6f2e8f7c696b928b4fa5727a406
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
@@ -108,7 +86,7 @@
             &copy; 2022 - Student_Planner - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
-    <script src="~/lib/jquery/dist/jquery-3.3.1.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
