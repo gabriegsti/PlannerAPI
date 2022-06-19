@@ -1,13 +1,19 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Configuration;
 using PlannerAPI.Models;
 using System;
 using System.Diagnostics;
 
-namespace PlannerAPI.Controllers
+namespace PlannerAPI.ControllersViews
 {
     public class HomeController : Controller
     {
+        public IConfiguration configuration;
+        public HomeController(IConfiguration configuration)
+        {
+
+        }
+
         public IActionResult Index()
         {
             return View();
@@ -20,6 +26,10 @@ namespace PlannerAPI.Controllers
 
         public IActionResult Materia()
         {
+<<<<<<< HEAD:PlannerAPI/Controllers/HomeController.cs
+=======
+
+>>>>>>> ab293ff68a32a6f2e8f7c696b928b4fa5727a406:PlannerAPI/ControllersViews/HomeController.cs
             return View();
         }
 
